@@ -1,0 +1,45 @@
+.side-menu {
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  top: 0;
+  border-right: 1px solid $black;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@keyframes closemenu {
+  from {
+    left: 0;
+  }
+
+  90% {
+    left: -60%
+  }
+
+  to {
+    display: none;
+  }
+}
+
+.side-menu--close {
+  left: -60%;
+  animation: closemenu 1s;
+}
+
+@keyframes openmenu {
+  from {
+    left: -60%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.side-menu--open {
+  left: 0;
+  animation: openmenu 1s;
+}

@@ -1,0 +1,12 @@
+.logo {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo__text {
+  font-size: 20px;
+  display: block;
+  color: $white;
+}
