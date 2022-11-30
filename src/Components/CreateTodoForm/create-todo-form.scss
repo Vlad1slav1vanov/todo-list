@@ -67,13 +67,17 @@
 }
 
 .create-todo-form__buttons {
+  display: none;
+  padding: 10px;
   width: 100%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $body-color;
   border-top: 1px solid $grey;
-  padding: 10px;
+}
+
+.create-todo-form__buttons--open {
+  display: flex;
 }
 
 .create-todo-form__buttons-wrapper {

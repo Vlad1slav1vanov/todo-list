@@ -1,5 +1,5 @@
 export interface ITodo {
+  id: number | null;
   title: string;
-  steps: string[];
-  date: string;
+  complete: boolean;
 }

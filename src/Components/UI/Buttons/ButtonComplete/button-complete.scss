@@ -1,0 +1,13 @@
+.button-complete {
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  border: 1px solid $blue;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button-complete--completed {
+  background-image: url('../../Icons/icon-check.svg');
+}

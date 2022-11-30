@@ -11,6 +11,10 @@ import MainTitlePage from "../Components/UI/MainTitlePage/MainTitlePage";
 import ButtonSort from "../Components/UI/Buttons/ButtonSort/ButtonSort";
 import MainTitleWrapper from "../Components/Wrappers/MainTitleWrapper/MainTitleWrapper";
 import CreateTodoForm from "../Components/CreateTodoForm/CreateTodoForm";
+import TodoList from "../Components/TodoList/TodoList";
+import BottomMenu from "../Components/BottomMenu/BottomMenu";
+import CreateTodoFormStore from "../store/CreateTodoFormStore/CreateTodoFormStore";
+import SideMenuStore from "../store/SideMenuStore/SideMenuStore";
 
 const HomePage: FC = () => {
   return (
@@ -20,7 +24,7 @@ const HomePage: FC = () => {
         <Logo />
       </Header>
       <MainWrapper>
-        <Popup>
+        <Popup menuState={SideMenuStore.currentState}>
           <SideMenu />
         </Popup>
         <MainTitleWrapper>
@@ -28,6 +32,7 @@ const HomePage: FC = () => {
           <ButtonSort />
         </MainTitleWrapper>
         <CreateTodoForm />
+        <TodoList />
       </MainWrapper>
     </>
   )

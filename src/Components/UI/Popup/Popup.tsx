@@ -4,12 +4,13 @@ import SideMenuStore from "../../../store/SideMenuStore/SideMenuStore";
 
 interface PopupProps {
   children: React.ReactNode;
+  menuState: string;
 }
 
-const Popup: FC<PopupProps> = ({children}) => {
+const Popup: FC<PopupProps> = ({children, menuState}) => {
   return (
     <div 
-    className={`popup popup--${SideMenuStore.currentState}`}
+    className={`popup popup--${menuState}`}
     onClick={() => SideMenuStore.closeSideMenu()}
     >
       {children}

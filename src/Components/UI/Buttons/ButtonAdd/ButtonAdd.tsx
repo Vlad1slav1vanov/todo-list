@@ -1,8 +1,15 @@
 import React, { FC } from "react";
 
-const ButtonAdd: FC = () => {
+interface ButtonAddProps {
+  onClick?: () => void;
+}
+
+const ButtonAdd: FC<ButtonAddProps> = ({onClick}) => {
   return (
-    <button className="button-add">
+    <button 
+    className="button-add"
+    onClick={onClick}
+    >
       Добавить
     </button>
   )
