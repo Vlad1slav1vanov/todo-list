@@ -28,6 +28,15 @@ class SideMenuStore {
   openSideMenu = () => {
     this.currentState = this.menuStates.OPEN;
   };
+
+
+  toggleSideMenu = () => {
+    this.currentState === 'open' 
+    ? 
+    this.closeSideMenu() 
+    : 
+    this.openSideMenu()
+  }
 }
 
 export default new SideMenuStore();

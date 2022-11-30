@@ -1,0 +1,17 @@
+.button-add {
+  font-size: 14px;
+  background-color: $white;
+  width: 90px;
+  padding: 5px;
+  border: 1px solid $grey;
+  color: $blue;
+
+  &:hover {
+    border-color: $blue;
+  }
+
+  &:focus {
+    border-color: $blue;
+    outline: 1px $blue solid;
+  }
+}

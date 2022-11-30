@@ -1,13 +1,15 @@
 .side-menu {
+  z-index: 10;
+  padding-top: 30px;
   height: 100%;
   width: 60%;
   position: absolute;
-  top: 0;
-  border-right: 1px solid $black;
+  top: 40px;
   background-color: $white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
 }
 
 @keyframes closemenu {
@@ -26,7 +28,7 @@
 
 .side-menu--close {
   left: -60%;
-  animation: closemenu 1s;
+  animation: closemenu 0.5s;
 }
 
 @keyframes openmenu {
@@ -41,5 +43,5 @@
 
 .side-menu--open {
   left: 0;
-  animation: openmenu 1s;
+  animation: openmenu 0.5s;
 }

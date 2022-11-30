@@ -1,0 +1,84 @@
+.create-todo-form {
+  width: 100%;
+  box-shadow: 0px 1px 3px $black;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-todo-form__input-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  padding: 5px;
+  padding-left: 15px;
+  align-items: center;
+}
+
+
+.create-todo-form__button-plus {
+  cursor: pointer;
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+  span {
+    position: absolute;
+    height: 1px;
+    width: 18px;
+    background-color: $blue;
+    top: 9.5px;
+    left: 1px;
+    border-radius: 1px;
+
+    &:first-child {
+      transform: rotate(90deg);
+    }
+  }
+
+  &:focus {
+    outline: 1px $blue solid;
+  }
+}
+
+.create-todo-form__label-title {
+  width: 100%;
+}
+
+#title {
+  padding: 5px;
+  border: none;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: 16px;
+
+  &::-webkit-input-placeholder {
+    color: $blue;
+  }
+
+  &:focus {
+    outline: none;
+    &::-webkit-input-placeholder {
+      color: $black;
+    }
+  }
+}
+
+.create-todo-form__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $body-color;
+  border-top: 1px solid $grey;
+  padding: 10px;
+}
+
+.create-todo-form__buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
