@@ -67,17 +67,46 @@
 }
 
 .create-todo-form__buttons {
-  display: none;
-  padding: 10px;
+  display: flex;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
   background-color: $body-color;
   border-top: 1px solid $grey;
+  animation: closeform 0.1s;
+}
+
+@keyframes closeform {
+  from {
+    max-height: 100%;
+    padding: 10px 10px;
+  }
+
+  to {
+    max-height: 0;
+    padding: 0 10px;
+  }
 }
 
 .create-todo-form__buttons--open {
-  display: flex;
+  padding: 10px;
+  max-height: 100%;
+  animation: openform 0.3s;
+}
+
+@keyframes openform {
+  from {
+    max-height: 0;
+    padding: 0 10px;
+  }
+
+  to {
+    max-height: 100%;
+    padding: 10px 10px;
+  }
 }
 
 .create-todo-form__buttons-wrapper {
