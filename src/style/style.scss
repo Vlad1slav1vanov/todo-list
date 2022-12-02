@@ -3,7 +3,7 @@
 @import '../Components/Header/header.scss';
 @import '../Components/UI/Logo/logo.scss';
 @import '../Components/UI/Buttons/BurgerButton/burger-button.scss';
-@import '../Components/SideMenu/side-menu.scss';
+@import '../Components/LeftMenu/left-menu.scss';
 @import '../Components/UI/Popup/popup.scss';
 @import '../Components/Wrappers/MainWrapper/main-wrapper.scss';
 @import '../Components/UI/Buttons/SideMenuButton/side-menu-button.scss';
@@ -16,6 +16,7 @@
 @import '../Components/UI/Buttons/ButtonAdd/button-add.scss';
 @import '../Components/TodoList/todo-list.scss';
 @import '../Components/Todo/todo.scss';
-@import '../Components/BottomMenu/bottom-menu.scss';
 @import '../Components/UI/Buttons/ButtonComplete/button-complete.scss';
 @import '../Components/UI/Buttons/ButtonAddToFavorites/button-add-to-favorites.scss';
+@import '../Components/BottomMenu/bottom-menu.scss';
+@import '../Components/UI/Buttons/ButtonBottomMenu/button-bottom-menu.scss';

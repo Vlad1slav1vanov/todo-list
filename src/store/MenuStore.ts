@@ -1,8 +1,23 @@
-import {makeAutoObservable} from "mobx";
+import {makeAutoObservable} from "mobx"
 
-class SideMenuStore {
+export class MenuStore {
   constructor() {
     makeAutoObservable(this)
+  }
+
+  // Типы нижнего меню 
+  menuTypes = {
+    TERM: 'term',
+    REMINDER: 'reminder',
+    REPEAT: 'repeat',
+  }
+
+  // Состояние типа открываемого меню
+  currentType = '';
+
+  // Вабор типа меню
+  changeMenuType = (type: string) => {
+    this.currentType = type;
   }
 
   // Возможные состояния меню
@@ -29,7 +44,7 @@ class SideMenuStore {
     this.currentState = this.menuStates.OPEN;
   };
 
-
+  // Функция тоглит меню
   toggleSideMenu = () => {
     this.currentState === 'open' 
     ? 
@@ -37,6 +52,15 @@ class SideMenuStore {
     : 
     this.openSideMenu()
   }
+
+  // Открыть меню нужного типа
+  openCurrentTypeMenu = (type: string) => {
+    this.changeMenuType(type);
+    this.openSideMenu();
+  }
 }
 
-export default new SideMenuStore();
+const leftMenu = new MenuStore();
+const bottomMenu = new MenuStore();
+
+export {leftMenu, bottomMenu};

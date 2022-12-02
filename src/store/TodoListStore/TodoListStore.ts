@@ -11,6 +11,11 @@ class TodoListStore {
       id: 1,
       title: 'Vladislav',
       complete: false,
+    },
+    {
+      id: 2,
+      title: 'lnkvsdvnsdvnsvklnsnkvlsnvsdkvlsdnvdklsvdn',
+      complete: false,
     }
   ];
 }

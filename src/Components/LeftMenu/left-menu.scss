@@ -1,4 +1,4 @@
-.side-menu {
+.left-menu {
   z-index: 10;
   padding-top: 30px;
   height: 100%;
@@ -26,7 +26,7 @@
   }
 }
 
-.side-menu--close {
+.left-menu--close {
   left: -60%;
   animation: closemenu 0.5s;
 }
@@ -41,7 +41,7 @@
   }
 }
 
-.side-menu--open {
+.left-menu--open {
   left: 0;
   animation: openmenu 0.5s;
 }

@@ -10,7 +10,7 @@ const Todo: FC<TodoProps> = ({title}) => {
   return (
     <div className="todo">
         <ButtonComplete />
-        <h3 className="todo__title">{title}</h3>
+        <p className="todo__title">{title}</p>
         <ButtonAddToFavorites />
     </div>
   )

@@ -3,6 +3,7 @@ import {observer} from "mobx-react-lite";
 import ButtonForm from "../UI/Buttons/ButtonForm/ButtonForm";
 import ButtonAdd from "../UI/Buttons/ButtonAdd/ButtonAdd";
 import CreateTodoFormStore from "../../store/CreateTodoFormStore/CreateTodoFormStore";
+import { bottomMenu } from "../../store/MenuStore";
 
 const CreateTodoForm: FC = () => {
   return (
@@ -28,9 +29,18 @@ const CreateTodoForm: FC = () => {
       </div>
       <div className={`create-todo-form__buttons${CreateTodoFormStore.todoState.title ? ' create-todo-form__buttons--open' : ''}`}>
         <div className="create-todo-form__buttons-wrapper">
-          <ButtonForm type="bell" />
-          <ButtonForm type="calendar" />
-          <ButtonForm type="refresh" />
+          <ButtonForm 
+          type={bottomMenu.menuTypes.TERM} 
+          onClick={() => bottomMenu.openCurrentTypeMenu(bottomMenu.menuTypes.TERM)} 
+          />
+          <ButtonForm 
+          type={bottomMenu.menuTypes.REMINDER} 
+          onClick={() => bottomMenu.openCurrentTypeMenu(bottomMenu.menuTypes.REMINDER)} 
+          />
+          <ButtonForm 
+          type={bottomMenu.menuTypes.REPEAT} 
+          onClick={() => bottomMenu.openCurrentTypeMenu(bottomMenu.menuTypes.REPEAT)} 
+          />
         </div>
         <ButtonAdd onClick={CreateTodoFormStore.createTodo} />
       </div>

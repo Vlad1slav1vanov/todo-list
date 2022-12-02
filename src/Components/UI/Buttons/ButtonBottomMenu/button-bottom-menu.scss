@@ -1,0 +1,89 @@
+.button-bottom-menu {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  padding: 10px;
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 10px 10px;
+}
+
+.button-bottom-menu:hover {
+  background-color: rgb(238, 238, 238);
+}
+
+.button-bottom-menu:active {
+  background-color: rgb(238, 238, 238);
+}
+
+.button-bottom-menu:focus {
+  background-color: rgb(238, 238, 238);
+}
+
+.button-bottom-menu--today {
+  background-image: url('../../../../assets/images/icons/icon-calendar-arrow-up.svg');
+}
+
+.button-bottom-menu--tommorow {
+  background-image: url('../../../../assets/images/icons/icon-calendar-arrow-right.svg');
+}
+
+.button-bottom-menu--next-week {
+  background-image: url('../../../../assets/images/icons/icon-calendar-dubble-arrow-right.svg');
+}
+
+.button-bottom-menu--remind-today {
+  background-image: url('../../../../assets/images/icons/icon-time-arrow-down.svg');
+}
+
+.button-bottom-menu--remind-tommorow {
+  background-image: url('../../../../assets/images/icons/icon-time-arrow-right.svg');
+}
+
+.button-bottom-menu--remind-next-week {
+  background-image: url('../../../../assets/images/icons/icon-time-dubble-arrow-right.svg');
+}
+
+.button-bottom-menu--repeat-every-day {
+  background-image: url('../../../../assets/images/icons/icon-calendar-window.svg');
+}
+
+.button-bottom-menu--repeat-work-days {
+  background-image: url('../../../../assets/images/icons/icon-calendar-window-2.svg');
+}
+
+.button-bottom-menu--repeat-every-week {
+  background-image: url('../../../../assets/images/icons/icon-calendar-window-3.svg');
+}
+
+.button-bottom-menu--repeat-every-month {
+  background-image: url('../../../../assets/images/icons/icon-calendar-dots.svg');
+}
+
+.button-bottom-menu--repeat-every-year {
+  background-image: url('../../../../assets/images/icons/icon-calendar-tripple.svg');
+}
+
+.button-bottom-menu--select-date, 
+.button-bottom-menu--remind-select-date,
+.button-bottom-menu--repeat-select 
+{
+  background-image: url('../../../../assets/images/icons/icon-calendar-time.svg');
+  border-bottom: 2px solid $grey;
+  border-top: 2px solid $grey;
+  padding: 20px 10px 20px 40px;
+  background-position: 10px 20px;
+}
+
+.button-bottom-menu--delete-date, 
+.button-bottom-menu--remind-delete-date,
+.button-bottom-menu--repeat-delete
+{
+  background-image: url('../../../../assets/images/icons/icon-trash-red.svg');
+  color: rgb(255, 0, 0);
+}
+
+
+

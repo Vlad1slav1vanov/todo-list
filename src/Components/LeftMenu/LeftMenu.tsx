@@ -1,15 +1,15 @@
 import React, { FC } from "react";
 import {observer} from "mobx-react-lite";
-import SideMenuStore from "../../store/SideMenuStore/SideMenuStore";
 import SideMenuButton from "../UI/Buttons/SideMenuButton/SideMenuButton";
 
-interface SideMenuProps {
+interface LeftMenuProps {
   children?: React.ReactNode;
+  menuState: string;
 }
 
-const SideMenu: FC<SideMenuProps> = ({children}) => {
+const SideMenu: FC<LeftMenuProps> = ({children, menuState}) => {
   return (
-    <div className={`side-menu side-menu--${SideMenuStore.currentState === 'open' ? 'open' : 'close'}`} 
+    <div className={`left-menu left-menu--${menuState === 'open' ? 'open' : 'close'}`} 
     onClick={(evt: React.MouseEvent<HTMLDivElement>) => evt.stopPropagation()}
     >
       <SideMenuButton type="all">Все задачи</SideMenuButton>
