@@ -12,5 +12,6 @@ export interface ITodo {
   reminder?: dayjs.Dayjs | null;
   repeat?: IRepeat;
   favorites: boolean;
+  complete: boolean;
 }
 

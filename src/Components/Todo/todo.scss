@@ -1,9 +1,19 @@
 .todo {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  gap: 15px;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
+  padding: 10px;
+}
+
+.todo__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
 }
 
 .todo__title {
@@ -13,4 +23,37 @@
   word-wrap: break-word;
   word-break: break-word;
   width: 80%;
+}
+
+.todo__timers {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.todo__timer {
+  width: max-content;
+  padding: 5px;
+  border: $blue 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  color: rgb(86, 86, 86);
+  padding-left: 25px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 4px 3px;
+}
+
+.todo__timer--term {
+  background-image: url('../../assets/images/icons/icon-calendar-dots.svg');
+}
+
+.todo__timer--reminder {
+  background-image: url('../../assets/images/icons/icon-bell.svg');
+}
+
+.todo__timer--repeat {
+  background-image: url('../../assets/images/icons/icon-repeat-arrows.svg');
 }

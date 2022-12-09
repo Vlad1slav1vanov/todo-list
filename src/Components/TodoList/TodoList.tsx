@@ -8,7 +8,7 @@ const TodoList = () => {
     <ul className="todo-list">
       {ListStore.todoList.map((todo) => 
       <li className="todo-list__item" key={todo.id}>
-        <Todo title={todo.title} />
+        <Todo todo={todo}/>
       </li>
       )}
     </ul>

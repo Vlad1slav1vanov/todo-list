@@ -13,7 +13,7 @@ class FormStore {
   }
 
   // Дата сейчас
-  dateNow = dayjs();
+  dateNow = dayjs()
 
   id = null;
   title = '';
@@ -179,6 +179,7 @@ class FormStore {
       reminder: this.reminder,
       repeat: this.repeat,
       favorites: false,
+      complete: false,
     }
 
     ListStore.todoList.push(todo)
