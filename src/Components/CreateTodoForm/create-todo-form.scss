@@ -68,6 +68,7 @@
 
 .create-todo-form__buttons {
   display: flex;
+  flex-direction: column;
   max-height: 0;
   overflow: hidden;
   padding: 0 10px;
@@ -114,4 +115,46 @@
   justify-content: space-between;
   gap: 10px;
 }
+
+.create-todo-form__all-buttons-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-todo-form__timers-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.create-todo-form__timer {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  padding-left: 25px;
+  background-position: 5px 6px;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-color: $white;
+  border: $blue 1px solid;
+  border-radius: 10px;
+}
+
+.create-todo-form__timer--term {
+  background-image: url('../../assets/images/icons/icon-calendar-dots.svg');
+}
+
+.create-todo-form__timer--reminder {
+  background-image: url('../../assets/images/icons/icon-bell.svg');
+}
+
+.create-todo-form__timer--repeat {
+  background-image: url('../../assets/images/icons/icon-repeat-arrows.svg');
+}
+
 

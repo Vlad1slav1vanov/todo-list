@@ -1,4 +1,4 @@
-import {makeAutoObservable} from "mobx"
+import {makeAutoObservable, runInAction} from "mobx"
 
 export class MenuStore {
   constructor() {
@@ -35,8 +35,10 @@ export class MenuStore {
   closeSideMenu = () => {
     this.currentState = this.menuStates.CLOSING;
     setTimeout(() => {
-      this.currentState = this.menuStates.CLOSE;
-    }, 500)
+      runInAction(() => {
+        this.currentState = this.menuStates.CLOSE;
+      })
+    }, 500)      
   };
 
   // Функция открывает меню
@@ -47,9 +49,9 @@ export class MenuStore {
   // Функция тоглит меню
   toggleSideMenu = () => {
     this.currentState === 'open' 
-    ? 
-    this.closeSideMenu() 
-    : 
+    ?
+    this.closeSideMenu()
+    :
     this.openSideMenu()
   }
 

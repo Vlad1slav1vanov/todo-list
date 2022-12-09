@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import React, { FC } from "react";
 
 interface ButtonBottomMenuProps {
@@ -33,8 +34,6 @@ const ButtonBottomMenu: FC<ButtonBottomMenuProps> = ({type, onClick}) => {
       {type === "repeat-every-year" && "Ежегодно"}
       {type === "repeat-select" && "Настроить"}
       {type === "repeat-delete" && "Не повторять"}
-
-
     </div>
   )
 }

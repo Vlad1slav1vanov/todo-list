@@ -15,3 +15,11 @@
     outline: 1px $blue solid;
   }
 }
+
+.button-add--term {
+  background-image: url('../../../../assets/images/icons/icon-calendar-dots.svg');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 4px 3px;
+  padding-left: 15px;
+}
