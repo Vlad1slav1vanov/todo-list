@@ -4,6 +4,11 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+  @media (min-width: 1024px) {
+    width: 58px;
+    height: 58px;
+  }
 }
 
 .burger-button__lines-wrapper {
@@ -11,6 +16,11 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
+
+  @media (min-width: 1024px) {
+    width: 54px;
+    height: 54px;
+  }
 }
 
 .burger-button__line {
@@ -32,5 +42,25 @@
   &:nth-child(3) {
     top: 23px;
     left: 6px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 40px;
+    height: 2px;
+
+    &:first-child {
+      top: 16px;
+      left: 8px;
+    }
+  
+    &:nth-child(2) {
+      top: 26px;
+      left: 8px;
+    }
+  
+    &:nth-child(3) {
+      top: 36px;
+      left: 8px;
+    }
   }
 }

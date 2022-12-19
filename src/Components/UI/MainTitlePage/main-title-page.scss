@@ -3,4 +3,8 @@
   font-weight: 700;
   width: 100%;
   color: $blue;
+
+  @media (min-width: 1024px) {
+    font-size: 26px;
+  }
 }

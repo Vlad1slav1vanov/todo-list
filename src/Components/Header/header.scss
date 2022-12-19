@@ -10,4 +10,8 @@
   width: 100%;
   background-color: $blue;
   height: 40px;
+
+  @media (min-width: 1024px) {
+    height: 60px;
+  }
 }

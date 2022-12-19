@@ -1,6 +1,5 @@
 .left-menu {
   z-index: 10;
-  padding-top: 30px;
   height: 100%;
   width: 60%;
   position: absolute;
@@ -10,6 +9,25 @@
   flex-direction: column;
   align-items: flex-start;
 
+  @media (min-width: $tablet-width) {
+    width: 250px;
+  }
+
+  @media (min-width: 1024px) {
+    top: 60px;
+  }
+}
+
+.left-menu__title {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: $blue;
+  font-size: 18px;
+
+  @media (min-width: 1024px) {
+    font-size: 24px;
+  }
 }
 
 @keyframes closemenu {

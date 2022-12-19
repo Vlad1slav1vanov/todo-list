@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import { FC } from "react";
 import {observer} from "mobx-react-lite";
 import Header from "../Components/Header/Header";
 import LeftMenu from "../Components/LeftMenu/LeftMenu";
@@ -7,13 +7,10 @@ import Logo from "../Components/UI/Logo/Logo";
 import Popup from "../Components/UI/Popup/Popup";
 import MainWrapper from "../Components/Wrappers/MainWrapper/MainWrapper";
 import MainTitlePage from "../Components/UI/MainTitlePage/MainTitlePage";
-import ButtonSort from "../Components/UI/Buttons/ButtonSort/ButtonSort";
-import MainTitleWrapper from "../Components/Wrappers/MainTitleWrapper/MainTitleWrapper";
 import CreateTodoForm from "../Components/CreateTodoForm/CreateTodoForm";
 import TodoList from "../Components/TodoList/TodoList";
 import { leftMenu, bottomMenu } from "../store/MenuStore";
 import BottomMenu from "../Components/BottomMenu/BottomMenu";
-import dayjs from 'dayjs';
 
 const HomePage: FC = () => {
   return (
@@ -39,11 +36,8 @@ const HomePage: FC = () => {
           menuType={bottomMenu.currentType}
           menuState={bottomMenu.currentState}
           />
-        </Popup>  
-        <MainTitleWrapper>
-          <MainTitlePage>Все задачи</MainTitlePage>
-          <ButtonSort />
-        </MainTitleWrapper>       
+        </Popup>
+          <MainTitlePage />     
         <CreateTodoForm />
         <TodoList />
       </MainWrapper>

@@ -10,5 +10,11 @@
   &--added {
     background-image: url('../../../../assets/images/icons/icon-star-filled.svg');
   }
+
+  @media (min-width: 1024px) {
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+  }
 }
 

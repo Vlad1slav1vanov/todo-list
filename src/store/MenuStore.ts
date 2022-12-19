@@ -60,9 +60,23 @@ export class MenuStore {
     this.changeMenuType(type);
     this.openSideMenu();
   }
+
+  SORTSTATES = {
+    ALL: 'all',
+    FAVORITES: 'favorites',
+    LATE: 'late',
+    COMPLETED: 'completed',
+  }
+
+  sortState = this.SORTSTATES.ALL
+
+  changeSort = (state: string) => {
+    this.sortState = state;
+  }
 }
 
 const leftMenu = new MenuStore();
 const bottomMenu = new MenuStore();
+const editTodoForm = new MenuStore();
 
-export {leftMenu, bottomMenu};
+export {leftMenu, bottomMenu, editTodoForm};

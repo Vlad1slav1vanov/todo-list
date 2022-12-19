@@ -24,6 +24,31 @@
     background-position: 10px 8px;
     padding-left: 36px;
   }
+
+  &--active {
+    border-left: solid 4px blue;
+    background-color: rgb(226, 226, 255);
+    font-weight: 700;
+    background-position: 10px 8px;
+    padding-left: 36px;
+  }
+
+  @media (min-width: 1024px) {
+    background-size: 25px;
+    font-size: 22px;
+    background-position: 13px 13px;
+    padding: 14px 0 14px 50px;
+
+    &--active {
+      background-position: 13px 13px;
+      padding: 14px 0 14px 50px;
+    }
+
+    &:focus {
+      background-position: 13px 13px;
+      padding: 14px 0 14px 50px;
+    }
+  }
 }
 
 .side-menu-button--all {
@@ -31,13 +56,15 @@
 }
 
 .side-menu-button--favorite {
-  background-image: url('../../../../assets/images/icons/icon-star.svg');
+  background-image: url('../../../../assets/images/icons/icon-star-filled.svg');
 }
 
 .side-menu-button--late {
-  background-image: url('../../../../assets/images/icons/icon-calendar-dots.svg');
+  background-image: url('../../../../assets/images/icons/icon-calendar-dots-red.svg');
+  color: red;
 }
 
 .side-menu-button--completed {
-  background-image: url('../../../../assets/images/icons/icon-check-square-broken.svg');
+  background-image: url('../../../../assets/images/icons/icon-check-square-broken-green.svg');
+  color: rgb(0, 128, 0);
 }

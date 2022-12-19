@@ -23,6 +23,11 @@
   width: 20px;
   height: 20px;
 
+  @media (min-width: 1024px) {
+    width: 26px;
+    height: 26px;
+  }
+
   span {
     position: absolute;
     height: 1px;
@@ -31,6 +36,12 @@
     top: 9.5px;
     left: 1px;
     border-radius: 1px;
+
+    @media (min-width: 1024px) {
+      width: 24px;
+      height: 2px;
+      top: 12px;
+    }
 
     &:first-child {
       transform: rotate(90deg);
@@ -53,6 +64,11 @@
   height: 100%;
   font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
+
+  @media (min-width: 1024px) {
+    font-size: 22px;
+    padding: 10px;
+  }
 
   &::-webkit-input-placeholder {
     color: $blue;
@@ -114,6 +130,10 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
+
+  @media (min-width: 1024px) {
+    gap: 20px;
+  }
 }
 
 .create-todo-form__all-buttons-wrapper {
@@ -132,6 +152,10 @@
   gap: 10px;
 }
 
+.create-todo-form__timers-wrapper--void {
+  margin-top: 0;
+}
+
 .create-todo-form__timer {
   display: flex;
   gap: 5px;
@@ -143,6 +167,14 @@
   background-color: $white;
   border: $blue 1px solid;
   border-radius: 10px;
+
+  @media (min-width: 1024px) {
+    background-size: 24px;
+    font-size: 18px;
+    padding: 10px;
+    padding-left: 35px;
+    background-position: 8px 8px;
+  }
 }
 
 .create-todo-form__timer--term {

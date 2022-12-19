@@ -1,8 +1,13 @@
 import React, { FC } from "react";
 
-const ButtonAddToFavorites: FC = () => {
+interface ButtonaddToFavoritesProps {
+  onClick?: () => void;
+  favorites: boolean;
+}
+
+const ButtonAddToFavorites: FC<ButtonaddToFavoritesProps> = ({onClick, favorites}) => {
   return (
-    <div className="button-add-to-favorites">
+    <div onClick={onClick} className={`button-add-to-favorites ${favorites && 'button-add-to-favorites--added'}`}>
       
     </div>
   )

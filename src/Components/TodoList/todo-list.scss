@@ -4,6 +4,12 @@
   align-items: center;
   width: 100%;
   gap: 10px;
+  padding: 10px 0;
+
+  @media (min-width: 1024px) {
+    gap: 20px;
+    padding: 20px 0;
+  }
 }
 
 .todo-list__item {
@@ -11,4 +17,21 @@
   box-shadow: 0px 0.5px 2px $black;
   border-radius: 5px;
   background-color: $white;
+
+  @media (min-width: 1024px) {
+    border-radius: 10px;
+  }
+}
+
+.todo-list__nothing-todo {
+  font-size: 15px;
+  padding: 20px;
+  background-color: $white;
+  border: $blue 2px solid;
+  width: 100%;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+  }
 }

@@ -1,8 +1,8 @@
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import { makeAutoObservable } from "mobx";
 import React from "react";
 import { IRepeat, ITodo } from "../types/Todo";
-import {bottomMenu} from "./MenuStore";
+import {bottomMenu, leftMenu} from "./MenuStore";
 import ListStore from "./ListStore"
 require('dayjs/locale/ru')
 dayjs.locale('ru')
@@ -27,6 +27,11 @@ class FormStore {
   // изменения заголовка
   titleOnChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     this.title = evt.target.value;
+  }
+
+  focusTitle = () => {
+    const title = document.getElementById('title');
+    title?.focus();
   }
 
   changeTermToday = () => {
@@ -156,7 +161,7 @@ class FormStore {
   }
 
   createTodoId = () => {
-    const id = ListStore.todoList.length + 1;
+    const id = Math.random() * 100;
     return id
   }
 
@@ -183,7 +188,10 @@ class FormStore {
     }
 
     ListStore.todoList.push(todo)
+    leftMenu.sortState === leftMenu.SORTSTATES.ALL && ListStore.sortAll()
     this.resetForm()
+    console.log(ListStore.todoList)
+    console.log(ListStore.todoListState)
   }
 }
 

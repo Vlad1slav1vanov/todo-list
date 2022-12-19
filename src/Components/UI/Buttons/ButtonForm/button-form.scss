@@ -10,6 +10,12 @@
   &:hover {
     background-color: $white;
   }
+
+  @media (min-width: 1024px) {
+    width: 30px;
+    height: 30px;
+    background-size: 26px;
+  }
 }
 
 .button-form--term {

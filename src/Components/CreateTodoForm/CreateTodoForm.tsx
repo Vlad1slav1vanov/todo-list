@@ -14,7 +14,10 @@ const CreateTodoForm: FC = () => {
   return (
     <div className="create-todo-form">
       <div className="create-todo-form__input-wrapper">
-        <div className="create-todo-form__button-plus">
+        <div 
+        className="create-todo-form__button-plus"
+        onClick={FormStore.focusTitle}
+        >
           <span></span>
           <span></span>
         </div>
@@ -65,7 +68,7 @@ const CreateTodoForm: FC = () => {
           </div>
           <ButtonAdd onClick={FormStore.createTodo}>Добавить</ButtonAdd>
         </div>
-        <div className={`create-todo-form__timers-wrapper ${FormStore.term || FormStore.reminder || FormStore.repeat ? '' : 'visually-hidden'}`}>
+        <div className={`create-todo-form__timers-wrapper ${FormStore.term || FormStore.reminder || FormStore.repeat.name ? '' : 'visually-hidden'}`}>
           <div className={`create-todo-form__timer create-todo-form__timer--term ${!FormStore.term && "visually-hidden"}`}>
             <span>Срок:</span>
             <span>{FormStore.term && checkDay(FormStore.term)}</span>

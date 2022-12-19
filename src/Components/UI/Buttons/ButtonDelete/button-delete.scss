@@ -1,0 +1,17 @@
+.button-delete {
+
+  background-image: url('../../../../assets/images/icons/icon-trash-red.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+  background-color: inherit;
+
+  @media (min-width: 1024px) {
+    width: 30px;
+    height: 30px;
+    background-size: 28px;
+  }
+}

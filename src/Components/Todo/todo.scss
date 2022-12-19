@@ -1,4 +1,5 @@
 .todo {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -6,6 +7,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+
+  @media (min-width: 1024px) {
+    gap: 25px;
+    padding: 20px;
+  }
+}
+
+.todo--void {
+  gap: 25px;
 }
 
 .todo__main {
@@ -14,6 +24,10 @@
   justify-content: space-between;
   width: 100%;
   gap: 10px;
+
+  @media (min-width: 1024px) {
+    gap: 15px;
+  }
 }
 
 .todo__title {
@@ -23,6 +37,16 @@
   word-wrap: break-word;
   word-break: break-word;
   width: 80%;
+
+  &--completed {
+    color: $grey;
+    text-decoration: line-through;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 22px;
+    width: 95%;
+  }
 }
 
 .todo__timers {
@@ -31,6 +55,11 @@
   flex-wrap: wrap;
   gap: 5px;
   font-size: 12px;
+
+  @media (min-width: 1024px) {
+    gap: 15px;
+    font-size: 18px;
+  }
 }
 
 .todo__timer {
@@ -44,10 +73,32 @@
   background-size: 18px;
   background-repeat: no-repeat;
   background-position: 4px 3px;
+
+  &--overdue {
+    border: rgb(255, 0, 0) 1px solid;
+    color: rgb(255, 0, 0);
+  }
+
+  @media (min-width: 1024px) {
+    padding: 10px;
+    padding-left: 35px;
+    background-size: 22px;
+    background-position: 8px 9px;
+  }
+}
+
+.todo__timers-button-delete-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  justify-content: space-between;
 }
 
 .todo__timer--term {
   background-image: url('../../assets/images/icons/icon-calendar-dots.svg');
+  display: flex;
+  gap: 5px;
 }
 
 .todo__timer--reminder {

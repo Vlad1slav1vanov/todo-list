@@ -5,6 +5,7 @@
   padding: 5px;
   border: 1px solid $grey;
   color: $blue;
+  position: relative;
 
   &:hover {
     border-color: $blue;
@@ -13,6 +14,12 @@
   &:focus {
     border-color: $blue;
     outline: 1px $blue solid;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 20px;
+    padding: 7px 12px;
+    width: auto;
   }
 }
 
